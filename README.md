@@ -30,36 +30,41 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Exercise Angular + RxJS [Basic]:
-Install Angular CLI
-Bootstrap a new Angular app
 Create a Service called ApiService with the JSON Placeholder API with these methods:
-    getPosts() ->  returns a list of all posts.
-    getComment(postId) ->  returns a list of comments for the postId.
-    getPostWithComments(postId) ->  returns a single post with comments.
+- getPosts() ->  returns a list of all posts.
+- getComment(postId) ->  returns a list of comments for the postId.
+- getPostWithComments(postId) ->  returns a single post with comments.
 
 Create 2 Components
-    PostsComponent ->  (displays a list of all posts)
-    PostComponent ->  (displays a single post with comments and a back button).
+-------------------
+- PostsComponent ->  (displays a list of all posts)
+- PostComponent ->  (displays a single post with comments and a back button).
 
 Create 3 routes
-    “/posts”    -> PostsComponent
-    “/post/{id}”  -> PostComponent
-    “/”  ->   Redirect to “/posts”
+---------------
+- “/posts”    -> PostsComponent
+- “/post/{id}”  -> PostComponent
+- “/”  ->   Redirect to “/posts”
 
-Must use async pipe and RxJS, no manual subscriptions or Promises
-Must use types and Interfaces (Post, Comment)
-Must apply private and public methods / properties
-No need to style, just use <pre> and the json pipe
+- Must use async pipe and RxJS, no manual subscriptions or Promises
+- Must use types and Interfaces (Post, Comment)
+- Must apply private and public methods / properties
+- No need to style, just use <pre> and the json pipe
 
 Resources
-[Angular CLI](https://github.com/angular/angular-cli)
-[JSONPlaceholder](https://github.com/typicode/jsonplaceholder)
-[RxJS](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html)
+---------
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [JSONPlaceholder](https://github.com/typicode/jsonplaceholder)
+- [RxJS](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html)
 
 REST Endpoints
-    https://jsonplaceholder.typicode.com/posts 
-    https://jsonplaceholder.typicode.com/posts/1 
-    http://jsonplaceholder.typicode.com/comments?postId=1 
+------------------
+- https://jsonplaceholder.typicode.com/posts 
+- https://jsonplaceholder.typicode.com/posts/1 
+- http://jsonplaceholder.typicode.com/comments?postId=1 
 
 CLI example command
+-------------------
+```bash
 ng new {username}-checkpoint-basic --style=scss --routing=true --prefix=gl
+```
