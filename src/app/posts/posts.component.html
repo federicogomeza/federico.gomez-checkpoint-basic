@@ -1,0 +1,15 @@
+<clr-datagrid>
+    <clr-dg-column>ID</clr-dg-column>
+    <clr-dg-column>Body</clr-dg-column>
+    <clr-dg-column>Title</clr-dg-column>
+    <clr-dg-column>User ID</clr-dg-column>
+    <clr-dg-column>View post</clr-dg-column>
+    <clr-dg-row *ngFor="let post of posts">
+        <clr-dg-cell>{{post.id}}</clr-dg-cell>
+        <clr-dg-cell>{{post.body}}</clr-dg-cell>
+        <clr-dg-cell>{{post.title}}</clr-dg-cell>
+        <clr-dg-cell>{{post.userId}}</clr-dg-cell>
+        <clr-dg-cell><a class="btn btn-primary" [routerLink]="['/post', post.id ]" >View post</a></clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer></clr-dg-footer>
+</clr-datagrid>
