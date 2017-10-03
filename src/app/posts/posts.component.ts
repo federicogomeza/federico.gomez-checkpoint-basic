@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { IPost } from '../i-post';
+import { Observable } from 'rxjs/Rx';
 
 @Component( {
     selector: 'gl-posts',
@@ -9,13 +10,13 @@ import { IPost } from '../i-post';
 } )
 export class PostsComponent implements OnInit {
 
-    public posts: any;
+    public posts$: Observable<IPost[]>;
 
     constructor(
         private apiService: ApiService,
         ) { }
 
     ngOnInit() {
-        this.posts = this.apiService.getPosts();
+        this.posts$ = this.apiService.getPosts();
     }
 }
