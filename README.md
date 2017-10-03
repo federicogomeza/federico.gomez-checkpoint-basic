@@ -1,5 +1,13 @@
 # Federico.GomezCheckpointBasic
 
+- Install:
+    ```bash
+    cd ~/code
+    git clone git@github.com:fga8/federico.gomez-checkpoint-basic.git
+    cd federico.gomez-checkpoint-basic
+    npm install
+    ```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
 ## Development server
