@@ -37,19 +37,19 @@ Create a Service called ApiService with the JSON Placeholder API with these meth
 
 Create 2 Components
 -------------------
-- PostsComponent ->  (displays a list of all posts)
+- PostsComponent ->  (displays a list of all posts).
 - PostComponent ->  (displays a single post with comments and a back button).
 
-Create 3 routes
+Create 3 Routes
 ---------------
 - “/posts”    -> PostsComponent
 - “/post/{id}”  -> PostComponent
 - “/”  ->   Redirect to “/posts”
 
-- Must use async pipe and RxJS, no manual subscriptions or Promises
-- Must use types and Interfaces (Post, Comment)
-- Must apply private and public methods / properties
-- No need to style, just use <pre> and the json pipe
+- Must use async pipe and RxJS, no manual subscriptions or Promises.
+- Must use types and Interfaces (Post, Comment).
+- Must apply private and public methods / properties.
+- No need to style, just use pre and the json pipe.
 
 Resources
 ---------

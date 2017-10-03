@@ -1,18 +1,5 @@
 <pre>
-    {{ post | json }}
+    {{ comment | async | json  }}
 </pre>
-<!--<clr-datagrid>
-    <clr-dg-column>ID</clr-dg-column>
-    <clr-dg-column>Body</clr-dg-column>
-    <clr-dg-column>Title</clr-dg-column>
-    <clr-dg-column>User ID</clr-dg-column>
-    <clr-dg-row>
-        <clr-dg-cell>{{post.id}}</clr-dg-cell>
-        <clr-dg-cell>{{post.body}}</clr-dg-cell>
-        <clr-dg-cell>{{post.title}}</clr-dg-cell>
-        <clr-dg-cell>{{post.userId}}</clr-dg-cell>
-    </clr-dg-row>
-    <clr-dg-footer></clr-dg-footer>
-</clr-datagrid>-->
 
 <button class="btn btn-danger" [routerLink]="['/']">Back</button>

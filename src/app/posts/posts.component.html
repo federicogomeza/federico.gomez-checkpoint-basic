@@ -4,7 +4,7 @@
     <clr-dg-column>Title</clr-dg-column>
     <clr-dg-column>User ID</clr-dg-column>
     <clr-dg-column>View post</clr-dg-column>
-    <clr-dg-row *ngFor="let post of posts">
+    <clr-dg-row *ngFor="let post of posts | async">
         <clr-dg-cell>{{post.id}}</clr-dg-cell>
         <clr-dg-cell>{{post.body}}</clr-dg-cell>
         <clr-dg-cell>{{post.title}}</clr-dg-cell>

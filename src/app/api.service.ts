@@ -17,11 +17,27 @@ export class ApiService {
 
     public getPosts(): Observable<IPost[]> {
         const path = `${this.basePathURL}/posts`;
-        return this.httpClient.get<IPost[]>(path);
+        return this.httpClient.get<IPost[]>( path );
     }
 
     public getPost( postId: number ): Observable<IPost> {
         const path = `${this.basePathURL}/posts/${postId}`;
-        return this.httpClient.get<IPost>(path);
+        return this.httpClient.get<IPost>( path );
+    }
+
+    public getComments( postId: number ): Observable<IComment[]> {
+        const path = `${this.basePathURL}/comments?postId=${postId}`;
+        return this.httpClient.get<IComment[]>( path ).startWith([]);
+    }
+
+    public getPostWithComments( postId: number ): Observable<IPost> {
+        const postService$ = this.getPost( postId );
+        const commentsService$ = this.getComments( postId );
+
+        return postService$.withLatestFrom( commentsService$ )
+            .map( ( [ post, comments ] ) => {
+                post.comments = comments;
+                return post;
+            } );
     }
 }
